@@ -32,7 +32,7 @@ resource "aws_subnet" "rds01" {
 resource "aws_subnet" "rds02" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = cidrsubnet("${aws_vpc.vpc.cidr_block}", 3, 3)
-  availability_zone = var.zones[3]
+  availability_zone = var.zones[1]
   tags              = merge(var.default_tags, tomap({ Name = "${var.name}-${var.environment_type}-rds02-subnet" }))
 }
 

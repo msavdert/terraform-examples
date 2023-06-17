@@ -15,13 +15,13 @@ variable "environment_type" {
 variable "region" {
   description = "The AWS region to deploy to"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "zones" {
   description = "The AWS availability zone to deploy to"
   type        = list(any)
-  default     = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d", "us-east-1e", "us-east-1f"]
+  default     = ["us-east-2a", "us-east-2b", "us-east-2c"]
 }
 
 variable "default_tags" {
